@@ -44,24 +44,8 @@ public class MainActivity extends AppCompatActivity {
   private static final String NAME = "name";
 
 
-  private void createFakedProducts() {
+  private void createArrayList() {
     products = new ArrayList<>();
-    Product p1 = new Product.Builder()
-        .alcohol(4.4)
-        .name("Pilsner Urquell")
-        .nr(1234)
-        .productGroup("Öl")
-        .type("Öl")
-        .volume(330).build();
-    Product p2 = new Product.Builder()
-        .alcohol(4.4)
-        .name("Baron Trenk")
-        .nr(1234)
-        .productGroup("Öl")
-        .type("Öl")
-        .volume(330).build();
-    products.add(p1);
-    products.add(p2);
   }
 
 
@@ -240,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
     // set up faked products
-    createFakedProducts();
+    createArrayList();
 
 
     // setup listview (and friends)
