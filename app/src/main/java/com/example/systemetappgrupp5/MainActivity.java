@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
   private static final String TYPE = "product_group";
   private static final String NAME = "name";
 
+  //Fisk
 
   private void createFakedProducts() {
     products = new ArrayList<>();
