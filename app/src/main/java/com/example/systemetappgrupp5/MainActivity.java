@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import com.android.volley.Request;
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
   private static final String MAX_PRICE = "max_price";
   private static final String TYPE = "product_group";
   private static final String NAME = "name";
+
+
 
 
   private void createArrayList() {
@@ -221,13 +224,25 @@ public class MainActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+    setContentView(R.layout.frontpage);
 
-    // set up faked products
-    createArrayList();
+      final Button yes_button = findViewById(R.id.yes_button);
+      final Button no_button = findViewById(R.id.no_button);
+      yes_button.setOnClickListener(new View.OnClickListener() {
+          public void onClick(View v) {
+              setContentView(R.layout.activity_main);
+              setupListView();
+          }
+      });
+
+      no_button.setOnClickListener(new View.OnClickListener() {
+          public void onClick(View v) {
+              setContentView(R.layout.under_20);
+          }
+      });
 
 
-    // setup listview (and friends)
-    setupListView();
+
+      createArrayList();
   }
 }
