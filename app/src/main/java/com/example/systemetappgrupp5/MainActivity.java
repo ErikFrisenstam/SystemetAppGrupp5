@@ -44,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
   private static final String TYPE = "product_group";
   private static final String NAME = "name";
 
+  private Button yes_button;
+  private Button no_button;
+  private Button search_button;
+
+
+
+
 
   private void createArrayList() {
     products = new ArrayList<>();
@@ -222,32 +229,33 @@ public class MainActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.frontpage);
 
-      final Button yes_button = findViewById(R.id.yes_button);
-      final Button no_button = findViewById(R.id.no_button);
-      final Button search_button = findViewById(R.id.search_button);
+       setContentView(R.layout.frontpage);
+       createArrayList();
 
-      createArrayList();
 
-      yes_button.setOnClickListener(new View.OnClickListener() {
-          public void onClick(View v) {
-              setContentView(R.layout.activity_main);
-              setupListView();
-              showSearchDialog();
-          }
-      });
-
-      no_button.setOnClickListener(new View.OnClickListener() {
-          public void onClick(View v) {
-              setContentView(R.layout.under_20);
-          }
-      });
-
-     /* search_button.setOnClickListener(new View.OnClickListener() {
-          public void onClick(View v) {
-              showSearchDialog();
-          }
-      }); */
   }
+
+  public void buttonOnClick(View view)
+  {
+    switch(view.getId())
+    {
+      case R.id.yes_button:
+        setContentView(R.layout.activity_main);
+        setupListView();
+        break;
+
+      case R.id.no_button:
+        setContentView(R.layout.under_20);
+        break;
+
+      case R.id.search_button:
+        showSearchDialog();
+        break;
+    }
+  }
+
+
+
+
 }
