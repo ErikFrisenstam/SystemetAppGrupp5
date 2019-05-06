@@ -252,6 +252,10 @@ public class MainActivity extends AppCompatActivity {
       case R.id.search_button:
         showSearchDialog();
         break;
+
+      case R.id.back_button:
+        setContentView(R.layout.frontpage);
+        break;
     }
   }
 
