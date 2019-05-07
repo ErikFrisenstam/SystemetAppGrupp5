@@ -44,13 +44,6 @@ public class MainActivity extends AppCompatActivity {
   private static final String TYPE = "product_group";
   private static final String NAME = "name";
 
-  private Button yes_button;
-  private Button no_button;
-  private Button search_button;
-
-
-
-
 
   private void createArrayList() {
     products = new ArrayList<>();
@@ -86,31 +79,6 @@ public class MainActivity extends AppCompatActivity {
     listView.setAdapter(adapter);
   }
 
-
-  /*@Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    MenuInflater inflater = getMenuInflater();
-    inflater.inflate(R.menu.actionbar_menu, menu);
-
-    return true;
-  }*/
-
-  /*@Override
-  public boolean onOptionsItemSelected(MenuItem item) {
-    switch (item.getItemId()) {
-      // action with ID action_refresh was selected
-      case R.id.action_search:
-        Log.d(LOG_TAG, "user presssed SEARCH");
-        showSearchDialog();
-        break;
-      default:
-        Log.d(LOG_TAG, "uh oh ;)");
-        break;
-    }
-    return true;
-  }*/
-
-
   // get the entered text from a view
   private String valueFromView(View inflated, int viewId) {
     return ((EditText) inflated.findViewById(viewId)).getText().toString();
@@ -125,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
   private void showSearchDialog() {
     AlertDialog.Builder builder = new AlertDialog.Builder(this);
-    builder.setTitle("Search products");
+    builder.setTitle("Sök produkter");
     final View viewInflated = LayoutInflater
         .from(this).inflate(R.layout.search_dialog, null);
 
@@ -258,8 +226,6 @@ public class MainActivity extends AppCompatActivity {
         break;
     }
   }
-
-
 
 
 }
