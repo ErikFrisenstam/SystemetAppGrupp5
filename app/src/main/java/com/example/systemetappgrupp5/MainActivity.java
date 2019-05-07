@@ -201,7 +201,6 @@ public class MainActivity extends AppCompatActivity {
        setContentView(R.layout.frontpage);
        createArrayList();
 
-
   }
 
   public void buttonOnClick(View view)
