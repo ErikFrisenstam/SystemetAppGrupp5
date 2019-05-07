@@ -45,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
   private static final String NAME = "name";
 
 
-
-
   private void createArrayList() {
     products = new ArrayList<>();
   }
@@ -81,31 +79,6 @@ public class MainActivity extends AppCompatActivity {
     listView.setAdapter(adapter);
   }
 
-
-  @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    MenuInflater inflater = getMenuInflater();
-    inflater.inflate(R.menu.actionbar_menu, menu);
-
-    return true;
-  }
-
-  @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
-    switch (item.getItemId()) {
-      // action with ID action_refresh was selected
-      case R.id.action_search:
-        Log.d(LOG_TAG, "user presssed SEARCH");
-        showSearchDialog();
-        break;
-      default:
-        Log.d(LOG_TAG, "uh oh ;)");
-        break;
-    }
-    return true;
-  }
-
-
   // get the entered text from a view
   private String valueFromView(View inflated, int viewId) {
     return ((EditText) inflated.findViewById(viewId)).getText().toString();
@@ -120,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
   private void showSearchDialog() {
     AlertDialog.Builder builder = new AlertDialog.Builder(this);
-    builder.setTitle("Search products");
+    builder.setTitle("Sök produkter");
     final View viewInflated = LayoutInflater
         .from(this).inflate(R.layout.search_dialog, null);
 
@@ -224,25 +197,35 @@ public class MainActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.frontpage);
 
-      final Button yes_button = findViewById(R.id.yes_button);
-      final Button no_button = findViewById(R.id.no_button);
-      yes_button.setOnClickListener(new View.OnClickListener() {
-          public void onClick(View v) {
-              setContentView(R.layout.activity_main);
-              setupListView();
-          }
-      });
-
-      no_button.setOnClickListener(new View.OnClickListener() {
-          public void onClick(View v) {
-              setContentView(R.layout.under_20);
-          }
-      });
+       setContentView(R.layout.frontpage);
+       createArrayList();
 
 
-
-      createArrayList();
   }
+
+  public void buttonOnClick(View view)
+  {
+    switch(view.getId())
+    {
+      case R.id.yes_button:
+        setContentView(R.layout.activity_main);
+        setupListView();
+        break;
+
+      case R.id.no_button:
+        setContentView(R.layout.under_20);
+        break;
+
+      case R.id.search_button:
+        showSearchDialog();
+        break;
+
+      case R.id.back_button:
+        setContentView(R.layout.frontpage);
+        break;
+    }
+  }
+
+
 }
