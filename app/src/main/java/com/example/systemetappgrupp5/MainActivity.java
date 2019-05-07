@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         searchProducts(arguments);
       }
     });
-    builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+    builder.setNegativeButton("Avbryt", new DialogInterface.OnClickListener() {
       @Override
       public void onClick(DialogInterface dialog, int which) {
         Log.d(LOG_TAG, " User cancelled search");
