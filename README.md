@@ -12,3 +12,11 @@ Who are we?
 * Emil Svensson - Programmer
 * Johannes Tienvieri - Project Leader
 * Andreas Åsén - Monitor Evaluator & UI Design
+
+--------------------------------------------------------
+
+Below you can see a snapshot of the frontpage.
+
+[![N|Solid](https://images2.imgbox.com/1a/6a/j2jlqqQl_o.png)]
+
+
