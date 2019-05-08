@@ -34,7 +34,7 @@ public class ProductActivity extends AppCompatActivity {
       setViewText(R.id.product_volume, "Volym", String.valueOf(product.volume()) + " ML");
       setViewText(R.id.product_alcohol, "Alkohol", String.valueOf(product.alcohol()) + " %");
       setViewText(R.id.product_price, "Pris", String.valueOf(product.price()) + " SEK");
-      setViewText(R.id.product_group, "Grupp", ""+product.productGroup());
+      setViewText(R.id.product_group, "Produktgrupp", ""+product.productGroup());
       setViewText(R.id.product_nr, "Artikelnr", String.valueOf(product.nr()));
     }
 
