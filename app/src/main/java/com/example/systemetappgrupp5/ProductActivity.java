@@ -25,7 +25,7 @@ public class ProductActivity extends AppCompatActivity {
 
     private void setViewText(int viewId, String label, String text) {
       TextView tv = findViewById(viewId);
-      tv.setText(Html.fromHtml("<b>"+label+"</b>: " + text));
+      tv.setText(Html.fromHtml("<b>"+label+"</b>:<br>" + text));
       Log.d(LOG_TAG, " * " + label + " | " + text);
     }
 
