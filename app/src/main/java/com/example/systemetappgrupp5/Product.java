@@ -1,9 +1,8 @@
 package com.example.systemetappgrupp5;
 
   import java.io.Serializable;
-  import java.util.Comparator;
 
-  public class Product implements Serializable {
+public class Product implements Serializable {
 
     private String name;
     private double price; // SEK
@@ -113,11 +112,13 @@ package com.example.systemetappgrupp5;
      * @param price The price of this Product (in SEK)
      * @param volume The volume (in millilitres) of this product
      */
-    public Product(String name, double alcohol, double price, int volume) {
+    public Product(String name, double alcohol, double price, int volume, String productGroup, int nr) {
       this.name = name;
       this.alcohol = alcohol;
       this.price = price;
       this.volume = volume;
+      this.productGroup = productGroup;
+      this.nr = nr;
     }
 
     /**

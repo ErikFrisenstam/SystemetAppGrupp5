@@ -183,12 +183,15 @@ public class MainActivity extends AppCompatActivity {
         double alcohol = row.getDouble("alcohol");
         double price = row.getDouble("price");
         int volume = row.getInt("volume");
+        String productGroup = row.getString("product_group");
+        Log.d(LOG_TAG, "   product group: " + productGroup);
+        int nr = row.getInt("nr");
 
-        Product m = new Product(name, alcohol, price, volume);
+        Product m = new Product(name, alcohol, price, volume, productGroup, nr);
         productList .add(m);
         Log.d(LOG_TAG, " * " + m);
       } catch (JSONException e) {
-        ; // is ok since this is debug
+         // is ok since this is debug
       }
     }
     return productList;

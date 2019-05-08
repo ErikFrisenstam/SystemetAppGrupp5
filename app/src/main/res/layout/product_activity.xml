@@ -10,7 +10,7 @@
         android:id="@+id/product_volume"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="124dp"
         android:text="Volym"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,11 +22,11 @@
         android:id="@+id/product_alcohol"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="420dp"
-        android:text="Alkohol "
+        android:layout_marginTop="188dp"
+        android:text="Alkohol"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,7 +34,7 @@
         android:id="@+id/product_price"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="516dp"
+        android:layout_marginTop="252dp"
         android:text="Pris"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,11 +47,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="60dp"
         android:text="Namn"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/product_group"
+        android:layout_width="146dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="312dp"
+        android:layout_marginEnd="264dp"
+        android:text="Produktgrupp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/product_nr"
+        android:layout_width="228dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="384dp"
+        android:layout_marginEnd="183dp"
+        android:text="nr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
