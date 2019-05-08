@@ -1,4 +1,7 @@
 # System Sök
+
+[![N|Solid](https://images2.imgbox.com/63/19/wvlCqNW4_o.png)](https://github.com/ErikFrisenstam/SystemetAppGrupp5)
+
 Main repository for our app.
 
 Hi and welcome to our school project for a android app using Systembolagets product index. 
