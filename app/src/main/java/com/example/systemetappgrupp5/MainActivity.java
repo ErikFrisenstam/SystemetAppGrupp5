@@ -16,6 +16,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -99,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
     builder.setView(viewInflated);
 
-    builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+    builder.setPositiveButton("Sök", new DialogInterface.OnClickListener() {
       @Override
       public void onClick(DialogInterface dialog, int which) {
         dialog.dismiss();
@@ -112,6 +114,11 @@ public class MainActivity extends AppCompatActivity {
         addToMap(arguments, MAX_ALCO, valueFromView(viewInflated, R.id.max_alco_input));
         addToMap(arguments, MIN_PRICE, valueFromView(viewInflated, R.id.min_price_input));
         addToMap(arguments, MAX_PRICE, valueFromView(viewInflated, R.id.max_price_input));
+        addToMap(arguments, NAME, valueFromView(viewInflated, R.id.name_input));
+        addToMap(arguments, TYPE, valueFromView(viewInflated, R.id.product_group_input));
+
+        TextView welcomeMessage = (TextView) findViewById(R.id.welcome_message);
+        welcomeMessage.setVisibility(View.INVISIBLE);
 
         // Given the map, s earch for products and update the listview
         searchProducts(arguments);
@@ -158,18 +165,45 @@ public class MainActivity extends AppCompatActivity {
             Log.d(LOG_TAG, "onResponse()");
             products.clear();
             products.addAll(jsonToProducts(array));
+
             adapter.notifyDataSetChanged();
           }
         }, new Response.ErrorListener() {
 
       @Override
       public void onErrorResponse(VolleyError error) {
-        Log.d(LOG_TAG, " cause: " + error.getCause().getMessage());
+        noProducts();
+      }
+
+    });
+    queue.add(jsonArrayRequest);
+  }
+
+
+  public void noProducts(){
+    AlertDialog.Builder builderError = new AlertDialog.Builder(this);
+    builderError.setTitle("Hittar inga produkter...");
+    final View viewInflated = LayoutInflater
+            .from(this).inflate(R.layout.no_products_found_dialog, null);
+
+    builderError.setView(viewInflated);
+    builderError.setPositiveButton("Sök igen", new DialogInterface.OnClickListener() {
+      @Override
+      public void onClick(DialogInterface dialog, int which) {
+        dialog.dismiss();
+        showSearchDialog();
       }
     });
 
-    // Add the request to the RequestQueue.
-    queue.add(jsonArrayRequest);
+    builderError.setNegativeButton("Avbryt", new DialogInterface.OnClickListener() {
+      @Override
+      public void onClick(DialogInterface dialog, int which) {
+        Log.d(LOG_TAG, " User cancelled search");
+        dialog.cancel();
+      }
+    });
+
+    builderError.show();
   }
 
 
