@@ -6,6 +6,10 @@ Main repository for our app.
 
 Hi and welcome to our school project for a android app using Systembolagets product index. 
 
+[![N|Solid](https://img.shields.io/badge/version-1.0-brightgreen.svg)](https://github.com/ErikFrisenstam/SystemetAppGrupp5/tree/v1.0) - is now released! :)
+
+
+
 Who are we?
 * Erik Frisenstam - Lead Programmer
 * Simon Ström - QA
