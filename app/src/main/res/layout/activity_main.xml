@@ -45,14 +45,14 @@
 
     <TextView
         android:id="@+id/welcome_message"
-        android:layout_width="222dp"
-        android:layout_height="175dp"
+        android:layout_width="314dp"
+        android:layout_height="173dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="Välkommen! \n\nSök på produkter genom att klicka på söknappen nedan."
+        android:text="Välkommen! \n\nSök efter produkter genom att klicka på sökknappen nedan."
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
