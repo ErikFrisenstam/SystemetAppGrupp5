@@ -16,6 +16,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -114,6 +116,9 @@ public class MainActivity extends AppCompatActivity {
         addToMap(arguments, MAX_PRICE, valueFromView(viewInflated, R.id.max_price_input));
         addToMap(arguments, NAME, valueFromView(viewInflated, R.id.name_input));
         addToMap(arguments, TYPE, valueFromView(viewInflated, R.id.product_group_input));
+
+        TextView welcomeMessage = (TextView) findViewById(R.id.welcome_message);
+        welcomeMessage.setVisibility(View.INVISIBLE);
 
         // Given the map, s earch for products and update the listview
         searchProducts(arguments);
