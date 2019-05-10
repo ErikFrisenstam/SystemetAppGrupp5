@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
     builder.setView(viewInflated);
 
-    builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+    builder.setPositiveButton("Sök", new DialogInterface.OnClickListener() {
       @Override
       public void onClick(DialogInterface dialog, int which) {
         dialog.dismiss();
@@ -112,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
         addToMap(arguments, MAX_ALCO, valueFromView(viewInflated, R.id.max_alco_input));
         addToMap(arguments, MIN_PRICE, valueFromView(viewInflated, R.id.min_price_input));
         addToMap(arguments, MAX_PRICE, valueFromView(viewInflated, R.id.max_price_input));
+        addToMap(arguments, NAME, valueFromView(viewInflated, R.id.name_input));
+        addToMap(arguments, TYPE, valueFromView(viewInflated, R.id.product_group_input));
 
         // Given the map, s earch for products and update the listview
         searchProducts(arguments);
