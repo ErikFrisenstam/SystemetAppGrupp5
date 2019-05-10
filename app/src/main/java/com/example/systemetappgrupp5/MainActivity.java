@@ -160,18 +160,45 @@ public class MainActivity extends AppCompatActivity {
             Log.d(LOG_TAG, "onResponse()");
             products.clear();
             products.addAll(jsonToProducts(array));
+
             adapter.notifyDataSetChanged();
           }
         }, new Response.ErrorListener() {
 
       @Override
       public void onErrorResponse(VolleyError error) {
-        Log.d(LOG_TAG, " cause: " + error.getCause().getMessage());
+        noProducts();
+      }
+
+    });
+    queue.add(jsonArrayRequest);
+  }
+
+
+  public void noProducts(){
+    AlertDialog.Builder builderError = new AlertDialog.Builder(this);
+    builderError.setTitle("Hittar inga produkter...");
+    final View viewInflated = LayoutInflater
+            .from(this).inflate(R.layout.no_products_found_dialog, null);
+
+    builderError.setView(viewInflated);
+    builderError.setPositiveButton("Sök igen", new DialogInterface.OnClickListener() {
+      @Override
+      public void onClick(DialogInterface dialog, int which) {
+        dialog.dismiss();
+        showSearchDialog();
       }
     });
 
-    // Add the request to the RequestQueue.
-    queue.add(jsonArrayRequest);
+    builderError.setNegativeButton("Avbryt", new DialogInterface.OnClickListener() {
+      @Override
+      public void onClick(DialogInterface dialog, int which) {
+        Log.d(LOG_TAG, " User cancelled search");
+        dialog.cancel();
+      }
+    });
+
+    builderError.show();
   }
 
 
