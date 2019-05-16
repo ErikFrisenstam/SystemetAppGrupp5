@@ -26,6 +26,6 @@ Who are we?
 
 --------------------------------------------------------
 
-![alt text](https://images2.imgbox.com/a1/51/afb51Lnk_o.png "")
+![alt text](https://images2.imgbox.com/b3/c6/mnMgRM5J_o.png "")
 
 
