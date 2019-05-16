@@ -26,8 +26,6 @@ Who are we?
 
 --------------------------------------------------------
 
-Below you can see a snapshot of the frontpage.
-
-[![N|Solid](https://images2.imgbox.com/1a/6a/j2jlqqQl_o.png)]()
+![alt text](https://images2.imgbox.com/a1/51/afb51Lnk_o.png "")
 
 
