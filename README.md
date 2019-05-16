@@ -10,6 +10,11 @@ Hi and welcome to our school project for a android app using Systembolagets prod
 
 [![N|Solid](https://img.shields.io/badge/version-1.0-brightgreen.svg)](https://github.com/ErikFrisenstam/SystemetAppGrupp5/tree/v1.0)
 
+App is tested & working on the following software:
+
+![alt text](https://img.shields.io/badge/Android%20Studio-%3E%3D%204.3-blue.svg "")
+![alt text](https://img.shields.io/badge/Android%20SDK%20Platform-27-blue.svg "")
+![alt text](https://img.shields.io/badge/Emulator-Pixel%202%20API%2027-blue.svg "")
 
 
 Who are we?
