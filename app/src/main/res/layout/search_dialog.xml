@@ -12,14 +12,6 @@
       android:inputType="textPersonName" />
 
   <EditText
-      android:id="@+id/product_group_input"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:ems="10"
-      android:hint="Produktgrupp"
-      android:inputType="textPersonName" />
-
-  <EditText
       android:id="@+id/min_alco_input"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"

@@ -115,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
         addToMap(arguments, MIN_PRICE, valueFromView(viewInflated, R.id.min_price_input));
         addToMap(arguments, MAX_PRICE, valueFromView(viewInflated, R.id.max_price_input));
         addToMap(arguments, NAME, valueFromView(viewInflated, R.id.name_input));
-        addToMap(arguments, TYPE, valueFromView(viewInflated, R.id.product_group_input));
 
         TextView welcomeMessage = (TextView) findViewById(R.id.welcome_message);
         welcomeMessage.setVisibility(View.INVISIBLE);
