@@ -12,9 +12,9 @@ Hi and welcome to our school project for a android app using Systembolagets prod
 
 App is tested & working on the following software:
 
-![alt text](https://img.shields.io/badge/Android%20Studio-%3E%3D%204.3-blue.svg "")
-![alt text](https://img.shields.io/badge/Android%20SDK%20Platform-27-blue.svg "")
-![alt text](https://img.shields.io/badge/Emulator-Pixel%202%20API%2027-blue.svg "")
+![Android Studio](https://img.shields.io/badge/Android%20Studio-%3E%3D%204.3-blue.svg)
+![SDK PLatform](https://img.shields.io/badge/Android%20SDK%20Platform-27-blue.svg)
+![Emulator](https://img.shields.io/badge/Emulator-Pixel%202%20API%2027-blue.svg)
 
 
 Who are we?
@@ -26,6 +26,4 @@ Who are we?
 
 --------------------------------------------------------
 
-![alt text](https://images2.imgbox.com/b3/c6/mnMgRM5J_o.png "")
-
-
+![Snapshots from our app](https://images2.imgbox.com/b3/c6/mnMgRM5J_o.png)
