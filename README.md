@@ -26,4 +26,4 @@ Who are we?
 
 --------------------------------------------------------
 
-![Snapshots from our app](https://images2.imgbox.com/b3/c6/mnMgRM5J_o.png)
+![Snapshots from our app](https://i.imgur.com/r6Sj2A1.png)
